@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -61,7 +62,7 @@ const Body = () => {
           const resInfo = restaurant?.info;
           return (
             resInfo && ( // Only render RestaurantCard if the data exists
-              <RestaurantCard key={resInfo?.id || index} resData={resInfo} />
+              <Link to={"/restaurant/"+resInfo?.id} className="link-style"><RestaurantCard  resData={resInfo} /></Link>
             )
           );
         })}

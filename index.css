@@ -71,3 +71,13 @@
 .filter{
     display: flex;
 }
+.link-style {
+    text-decoration: none; 
+    color: inherit;        
+  }
+  
+  .link-style:hover {
+    text-decoration: none; 
+    color: inherit;       
+  }
+  
