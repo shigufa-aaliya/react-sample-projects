@@ -17,9 +17,9 @@ const RestaurantCard = (props) => {
   } = resData;
 
   return (
-    <div className="res-card" style={{ backgroundColor: "#f0f0f0" }}>
+    <div className="m-4 p-4 w-[250px] rounded-lg bg-gray-100 hover:bg-gray-300">
       <img
-        className="res-logo"
+        className="rounded-lg"
         alt="res-logo"
         src={
           cloudinaryImageId
@@ -27,7 +27,7 @@ const RestaurantCard = (props) => {
             : "https://via.placeholder.com/150" // Default image if not available
         }
       />
-      <h3 className="name-styling">{name || "Restaurant Name Not Available"}</h3>
+      <h3 className="font-bold py-4 text-lg">{name || "Restaurant Name Not Available"}</h3>
       <h4 className="cuisines-styling">
         {cuisines?.length ? cuisines.join(", ") : "Cuisines Not Available"}
       </h4>
